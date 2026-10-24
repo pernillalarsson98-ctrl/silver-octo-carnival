@@ -1,67 +1,346 @@
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Butik | Pernilla Larsson</title>
-    <style>
-        body { background-color: #0d0d0d; color: #f0f0f0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
-        header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 1px solid #222; }
-        nav a { color: #888; text-decoration: none; margin-left: 15px; font-weight: 500; }
-        nav a:hover, nav a.active { color: #00ff66; }
-        .btn-green { display: inline-block; padding: 10px 18px; background-color: #00ff66; color: #000; font-weight: bold; text-decoration: none; border-radius: 4px; margin-top: 10px; }
-        .card-grid { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
-        .card { border: 1px solid #222; padding: 20px; border-radius: 8px; flex: 1; min-width: 260px; background: #141414; }
-        section { margin: 40px 0; }
-        h1, h2, h3 { color: #fff; }
-        .accent { color: #00ff66; }
-        footer { border-top: 1px solid #222; padding-top: 20px; color: #666; font-size: 0.85em; text-align: center; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Butik | Pernilla Larsson</title>
+  <meta name="description" content="Unika skapelser, personligt hantverk och återbruk från SpecialN'Customized.">
+  <style>
+    :root {
+      --bg: #100b1c;
+      --panel: #1d1430;
+      --pink: #ff78c8;
+      --turquoise: #55eadc;
+      --lime: #c9ff70;
+      --text: #f8f3ff;
+      --muted: #c7bdd6;
+      --border: #49365e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at top left, #382052 0, transparent 48%),
+        var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--turquoise);
+    }
+
+    .wrap {
+      width: min(100% - 36px, 1050px);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .brand {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 650;
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] {
+      color: var(--pink);
+    }
+
+    .hero {
+      padding: 64px 0 36px;
+    }
+
+    .eyebrow {
+      color: var(--turquoise);
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-size: 0.85rem;
+      font-weight: 750;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 8vw, 4.6rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      max-width: 800px;
+      margin: 14px 0 22px;
+    }
+
+    .gradient {
+      background: linear-gradient(90deg, var(--pink), var(--turquoise));
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .intro {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.15rem;
+    }
+
+    .values {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .tag {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 13px;
+      color: var(--turquoise);
+      background: #1b1229;
+      font-size: 0.9rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin: 22px 0 8px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      margin-top: 0;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+      gap: 22px;
+      padding: 20px 0 58px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #251735, #171022);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 12px 32px #00000025;
+    }
+
+    .symbol {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: #392047;
+      color: var(--pink);
+      font-size: 1.7rem;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      line-height: 1.3;
+      margin: 0 0 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .price {
+      color: var(--lime);
+      font-size: 1.08rem;
+      font-weight: 800;
+      margin: 20px 0;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 800;
+      padding: 12px 18px;
+      border-radius: 12px;
+      color: #160e20;
+      background: linear-gradient(100deg, var(--pink), var(--turquoise));
+      border: 0;
+    }
+
+    .button:hover {
+      filter: brightness(1.08);
+      transform: translateY(-1px);
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 14px;
+    }
+
+    .story {
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px;
+      margin-bottom: 60px;
+      background: #1b1229;
+    }
+
+    .story h2 {
+      margin-top: 0;
+      color: var(--pink);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0 40px;
+      color: var(--muted);
+    }
+
+    footer a {
+      margin-right: 16px;
+    }
+
+    @media (max-width: 520px) {
+      .hero {
+        padding-top: 44px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<header>
-    <div style="font-weight: bold; font-size: 1.2em;"><a href="index.html" style="color:#fff; text-decoration:none;">Pernilla Larsson</a></div>
-    <nav>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">Pernilla Larsson</a>
+      <nav aria-label="Huvudmeny">
         <a href="index.html">Startsida</a>
-        <a href="special.html">Special & Custom</a>
-        <a href="butik.html" class="active">Butik</a>
+        <a href="special.html">Special &amp; Custom</a>
+        <a href="butik.html" aria-current="page">Butik</a>
         <a href="index.html#kontakt">Kontakt</a>
-    </nav>
-</header>
+      </nav>
+    </div>
+  </header>
 
-<main>
-    <section style="margin-top: 30px;">
-        <div style="color: #888; text-transform: uppercase; font-size: 0.85em;">Köpa & Beställa</div>
-        <h1 style="font-size: 2.2em; margin: 10px 0;">Butik & Custom-beställningar</h1>
-        <p style="color: #ccc; max-width: 600px;">Här kan du köpa färdiga unika alster eller lägga en handpenning för skräddarsydda projekt.</p>
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">SpecialN'Customized · Skapat med mening</div>
+      <h1>Unikt hantverk.<br><span class="gradient">Nytt liv i det gamla.</span></h1>
+      <p class="intro">
+        Här hittar du personligt omgjorda alster, återbruk och
+        skapelser med egen karaktär. Varje föremål får bära sin
+        egen historia – långt från massproduktion.
+      </p>
+      <div class="values">
+        <span class="tag">♻️ Återbruk</span>
+        <span class="tag">✂️ Hantverk</span>
+        <span class="tag">✦ Unikt &amp; personligt</span>
+      </div>
     </section>
 
-    <section id="produkter">
-        <div class="card-grid">
-            <div class="card">
-                <h3>Custom Skinnjacka / Återbruk</h3>
-                <p style="color: #ccc;">Unikt hantverk med nitar, patchar och personlig anpassning.</p>
-                <p style="font-weight: bold; font-size: 1.2em;" class="accent">Fast pris / Handpenning</p>
-                <a href="https://revolut.me/pernillalarsson98" target="_blank" class="btn-green">Betala med Revolut / Kort →</a>
-            </div>
-            <div class="card">
-                <h3>Specialbeställning & Konsultation</h3>
-                <p style="color: #ccc;">Boka en skräddarsydd lösning eller custom-design efter dina önskemål.</p>
-                <p style="font-weight: bold; font-size: 1.2em;" class="accent">Enligt överenskommelse</p>
-                <a href="https://revolut.me/pernillalarsson98" target="_blank" class="btn-green">Betala med Revolut / Kort →</a>
-            </div>
-        </div>
+    <section aria-labelledby="products-title">
+      <h2 class="section-title" id="products-title">Butik &amp; beställningar</h2>
+      <p class="section-intro">
+        Upptäck unika alster eller hör av dig om du har en egen idé.
+      </p>
+
+      <div class="products">
+        <article class="card">
+          <div class="symbol" aria-hidden="true">✦</div>
+          <h3>Custom skinnjacka &amp; återbruk</h3>
+          <p>
+            Personliga detaljer, nitar, patchar och kreativ
+            omarbetning. En jacka eller ett plagg kan få ett helt
+            nytt uttryck i stället för att glömmas bort.
+          </p>
+          <div class="price">Pris och handpenning enligt överenskommelse</div>
+          <a class="button" href="index.html#kontakt">Fråga om beställning →</a>
+        </article>
+
+        <article class="card">
+          <div class="symbol" aria-hidden="true">✂</div>
+          <h3>Specialbeställning</h3>
+          <p>
+            Har du ett plagg, ett föremål eller en idé som du vill
+            ge nytt liv? Beskriv vad du tänker dig så kan vi prata
+            om möjligheter, utförande och pris.
+          </p>
+          <div class="price">Pris enligt överenskommelse</div>
+          <a class="button" href="index.html#kontakt">Diskutera din idé →</a>
+        </article>
+
+        <article class="card">
+          <div class="symbol" aria-hidden="true">♡</div>
+          <h3>Unika färdiga alster</h3>
+          <p>
+            Handgjorda detaljer och personligt skapade föremål.
+            Utbudet kan förändras eftersom varje alster är speciellt.
+            Kontakta mig för att fråga vad som finns tillgängligt.
+          </p>
+          <div class="price">Fråga om aktuellt utbud</div>
+          <a class="button" href="special.html">Se Special &amp; Custom →</a>
+        </article>
+      </div>
     </section>
 
-    <section style="border-top: 1px solid #222; padding-top: 30px;">
-        <a href="index.html" style="color:#888; text-decoration:none;">← Tillbaka till startsidan</a>
+    <section class="story">
+      <h2>Mer än bara en sak</h2>
+      <p>
+        SpecialN'Customized bygger på skaparglädje, mänskligt
+        arbete och återbruk. Jag tror på att se möjligheter i det
+        som redan finns och skapa något personligt i stället för
+        att följa massproduktionens tempo.
+      </p>
+      <p>
+        Har du frågor eller en idé? Ta kontakt så pratar vi vidare.
+      </p>
+      <a class="button" href="index.html#kontakt">Kontakta mig →</a>
     </section>
-</main>
+  </main>
 
-<footer>
-    Min värld ✦ Personligt skapad med HTML, CSS och Python
-</footer>
-
+  <footer>
+    <div class="wrap">
+      <p>SpecialN'Customized · Skapat med mening.</p>
+      <a href="index.html">Startsida</a>
+      <a href="special.html">Special &amp; Custom</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </div>
+  </footer>
 </body>
 </html>
