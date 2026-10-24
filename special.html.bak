@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SpecialNCustomized | Unika skapelser</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#171020;color:#fff7ff;font-family:system-ui,sans-serif}
+header{padding:22px;background:#241831;border-bottom:1px solid #ffffff25}
+header a{color:#d5ff72;text-decoration:none}
+main{max-width:900px;margin:auto;padding:28px 18px 55px}
+.eyebrow{color:#d5ff72;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:bold}
+h1{font-size:clamp(38px,9vw,65px);line-height:1.05;margin:14px 0}
+p{color:#d4c5dc;line-height:1.8}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:28px}
+.card{overflow:hidden;border:1px solid #ffffff25;border-radius:18px;background:#241831}
+.art{min-height:150px;display:grid;place-items:center;font-size:48px;background:linear-gradient(135deg,#ff5ca8,#bb8cff,#73f5e1)}
+.card:nth-child(2) .art{background:linear-gradient(135deg,#d5ff72,#73f5e1)}
+.card:nth-child(3) .art{background:linear-gradient(135deg,#7047c7,#ff5ca8)}
+.card:nth-child(4) .art{background:linear-gradient(135deg,#73f5e1,#7047c7)}
+.info{padding:18px}
+h2{font-size:20px;margin:0 0 8px}
+.note{font-size:13px;color:#b9a9c4}
+footer{margin-top:30px;color:#b9a9c4;font-size:13px}
+</style>
+</head>
+<body>
+<header><a href="/">← Tillbaka till Min värld</a></header>
+<main>
+<div class="eyebrow">Handgjort · Återbruk · Personlighet</div>
+<h1>SpecialN<br>Customized<span style="color:#ff5ca8">.</span></h1>
+<p>Unika saker med egen karaktär. Här står hantverket, återbruket och berättelsen bakom varje skapelse i centrum — inte massproduktion.</p>
+<div class="grid">
+<article class="card"><div class="art"><img src="bilder/forsta-bilden.png" alt="Handgjord skapelse" style="width:100%;height:100%;object-fit:cover;border-radius:12px;"></div><div class="info"><h2>Handgjorda accessoarer</h2><p>Små detaljer och personliga skapelser, gjorda för hand.</p><div class="note">Bild läggs till senare</div></div></article>
+<article class="card"><div class="art"><img src="bilder/andra-bilden.png" alt="Återbruk och förnyelse" style="width:100%;height:100%;object-fit:cover;border-radius:12px;"></div><div class="info"><h2>Återbruk & förnyelse</h2><p>Material och föremål som får nytt liv och ett eget uttryck.</p><div class="note">Bild läggs till senare</div></div></article>
+<article class="card"><div class="art">✂</div><div class="info"><h2>Omgjorda plagg</h2><p>Kläder med personliga detaljer och en historia bakom sig.</p><div class="note">Bild läggs till senare</div></div></article>
+<article class="card"><div class="art">♡</div><div class="info"><h2>Historien bakom</h2><p>Idén, arbetet och tanken som gör varje skapelse speciell.</p><div class="note">Berättelser kommer snart</div></div></article>
+</div>
+<footer>Varje skapelse får vara sin egen. ✦</footer>
+</main>
+</body>
+</html>

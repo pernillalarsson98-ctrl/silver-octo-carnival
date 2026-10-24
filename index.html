@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171020">
+<title>Min värld | Kreativitet utan gränser</title>
+<style>
+:root {
+  --bg: #171020;
+  --panel: #241831;
+  --text: #fff7ff;
+  --muted: #d4c5dc;
+  --pink: #ff5ca8;
+  --purple: #bb8cff;
+  --lime: #d5ff72;
+  --cyan: #73f5e1;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at 5% 5%, #63245c 0, transparent 35%),
+    radial-gradient(ellipse at 95% 35%, #253f54 0, transparent 32%),
+    var(--bg);
+  font-family: system-ui, sans-serif;
+}
+a { color: inherit; }
+header {
+  position: relative;
+  padding: 20px;
+  border-bottom: 1px solid #ffffff20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.logo { font-weight: 900; letter-spacing: 1px; }
+.logo span { color: var(--pink); }
+nav { display: flex; gap: 15px; flex-wrap: wrap; }
+nav a {
+  text-decoration: none;
+  font-size: 13px;
+  color: var(--muted);
+}
+nav a:hover { color: var(--lime); }
+main { max-width: 1000px; margin: auto; padding: 35px 20px 65px; }
+.eyebrow {
+  color: var(--lime);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 800;
+}
+.hero { padding: 45px 0 50px; }
+h1 {
+  max-width: 800px;
+  font-size: clamp(44px, 10vw, 88px);
+  line-height: .99;
+  letter-spacing: -3px;
+  margin: 20px 0;
+}
+.gradient {
+  background: linear-gradient(90deg, var(--pink), var(--purple), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.intro {
+  max-width: 650px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.pill {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 18px;
+  border-radius: 30px;
+  background: var(--lime);
+  color: #21152a;
+  font-weight: 800;
+  text-decoration: none;
+}
+section { padding: 28px 0; scroll-margin-top: 20px; }
+.section-head { margin-bottom: 18px; }
+h2 { font-size: clamp(25px, 5vw, 38px); margin: 8px 0; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+.card {
+  background: #241831df;
+  border: 1px solid #ffffff24;
+  border-radius: 20px;
+  padding: 22px;
+  min-height: 180px;
+  box-shadow: 0 12px 35px #00000015;
+}
+.card:nth-child(3n+1) { border-top: 3px solid var(--pink); }
+.card:nth-child(3n+2) { border-top: 3px solid var(--lime); }
+.card:nth-child(3n) { border-top: 3px solid var(--cyan); }
+.symbol { font-size: 28px; }
+.card h3 { margin: 14px 0 8px; font-size: 20px; }
+.card p, .copy {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 15px;
+}
+.story {
+  border-radius: 22px;
+  padding: 25px;
+  background: linear-gradient(135deg, #ff5ca81c, #bb8cff20, #73f5e11a);
+  border: 1px solid #ffffff25;
+}
+.contact {
+  text-align: center;
+  padding: 35px 20px;
+  margin-top: 35px;
+  border-radius: 24px;
+  background: #d5ff7212;
+  border: 1px solid #d5ff7244;
+}
+.contact .pill { margin-top: 8px; }
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  color: #b9a9c4;
+  font-size: 12px;
+  border-top: 1px solid #ffffff20;
+}
+@media (max-width: 500px) {
+  header { align-items: flex-start; }
+  nav { gap: 10px; }
+  h1 { letter-spacing: -1.5px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">MIN <span>VÄRLD ✦</span></div>
+  <nav aria-label="Huvudmeny">
+    <a href="#om">Om mig</a>
+    <a href="#special">SpecialNCustomized</a>
+    <a href="#projekt">Projekt</a>
+    <a href="#hobbys">Hobbys</a>
+  </nav>
+</header>
+<main>
+  <div class="hero" id="om">
+    <div class="eyebrow">Personligt · Kreativt · Alternativt</div>
+    <h1>Inte gjord för att passa in.<br><span class="gradient">Gjorda för att skapa.</span></h1>
+    <p class="intro">
+      Välkommen till min egen lilla värld på nätet.
+      Här får kreativitet, personliga projekt och annorlunda idéer
+      ta plats. Sidan växer tillsammans med allt jag skapar.
+    </p>
+    <a class="pill" href="#projekt">Utforska min värld ↓</a>
+  </div>
+
+  <section id="special">
+    <div class="section-head">
+      <div class="eyebrow">Hantverk med karaktär</div>
+      <h2>SpecialNCustomized</h2>
+      <p><a class="pill" href="/special.html">Se galleriet →</a></p>
+    </div>
+    <div class="story">
+      <p class="copy">
+        Unika skapelser, hantverk och återbruk. Jag tror på att ta vara
+        på material, uppskatta arbetet bakom det handgjorda och skapa
+        saker med egen personlighet i stället för att allt ska vara
+        massproducerat och likadant.
+      </p>
+      <p class="copy">
+        Här kommer jag att visa mina skapelser, produkter och berättelsen
+        bakom dem. Bilder och mer information lägger jag till efter hand.
+      </p>
+    </div>
+  </section>
+
+  <section id="projekt">
+    <div class="section-head">
+      <div class="eyebrow">Saker jag utforskar</div>
+      <h2>Mina projekt</h2>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="symbol">✦</div>
+        <h3>Skapa & förnya</h3>
+        <p>Idéer, handarbete och föremål som får ett nytt uttryck.</p>
+      </article>
+      <article class="card">
+        <div class="symbol">⌘</div>
+        <h3>Teknik & Linux</h3>
+        <p>Jag lär mig nya saker och bygger egna små digitala projekt.</p>
+      </article>
+      <article class="card">
+        <div class="symbol">✧</div>
+        <h3>Nästa idé</h3>
+        <p>En plats för nya projekt som ännu bara finns i tankarna.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="hobbys">
+    <div class="section-head">
+      <div class="eyebrow">Många sidor av samma person</div>
+      <h2>Hobbys & tjänster</h2>
+    </div>
+    <div class="story">
+      <p class="copy">
+        Jag har flera intressen och gillar att prova nya saker.
+        Den här delen ska samla mina hobbys, färdigheter och sådant
+        jag kan hjälpa andra med.
+      </p>
+      <p class="copy">
+        Innehållet kan byggas ut senare, när jag bestämt vilka delar
+        jag vill visa här.
+      </p>
+    </div>
+  </section>
+
+  <section id="berattelsen">
+    <div class="section-head">
+      <div class="eyebrow">Mer än bara ett färdigt resultat</div>
+      <h2>Berättelsen bakom skapandet</h2>
+    </div>
+    <p class="copy">
+      Varje skapelse har sin egen väg dit: materialet, idéerna,
+      arbetet och de små detaljerna som gör den personlig.
+      Här kommer jag att berätta mer om processen och varför
+      jag tycker att återbruk och hantverk spelar roll.
+    </p>
+<div style="margin-top: 16px;">
+  <a href="special.html#historien-bakom" style="display: inline-block; background-color: #d2f83a; color: #0f0d1a; padding: 10px 22px; border-radius: 999px; font-weight: bold; text-decoration: none; font-size: 0.95em;">Läs hela berättelsen →</a>
+</div>
+  </section>
+
+  <section class="contact" id="kontakt">
+    <div class="eyebrow">Nyfiken på det jag gör?</div>
+    <h2>Vi hörs när du vill.</h2>
+    <p class="copy">Kontaktmöjligheter lägger jag till när jag är redo.</p>
+    <a class="pill" href="#kontakt">Kontakt · kommer snart</a>
+  </section>
+</main>
+<footer>Min värld ✦ Personligt skapad med HTML, CSS och Python</footer>
+</body>
+</html>
