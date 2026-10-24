@@ -1,248 +1,442 @@
-
 <!doctype html>
 <html lang="sv">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#171020">
-<title>Min värld | Kreativitet utan gränser</title>
-<style>
-:root {
-  --bg: #171020;
-  --text: #fff7ff;
-  --muted: #d4c5dc;
-  --pink: #ff5ca8;
-  --purple: #bb8cff;
-  --lime: #d5ff72;
-  --cyan: #73f5e1;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  color: var(--text);
-  background:
-    radial-gradient(ellipse at 5% 5%, #63245c 0, transparent 35%),
-    radial-gradient(ellipse at 95% 35%, #253f54 0, transparent 32%),
-    var(--bg);
-  font-family: system-ui, sans-serif;
-}
-a { color: inherit; }
-header {
-  padding: 20px;
-  border-bottom: 1px solid #ffffff20;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-.logo { font-weight: 900; letter-spacing: 1px; }
-.logo span { color: var(--pink); }
-nav { display: flex; gap: 15px; flex-wrap: wrap; }
-nav a {
-  text-decoration: none;
-  font-size: 13px;
-  color: var(--muted);
-}
-nav a:hover { color: var(--lime); }
-main { max-width: 1000px; margin: auto; padding: 35px 20px 65px; }
-.eyebrow {
-  color: var(--lime);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 12px;
-  font-weight: 800;
-}
-.hero { padding: 45px 0 50px; }
-h1 {
-  max-width: 800px;
-  font-size: clamp(44px, 10vw, 88px);
-  line-height: .99;
-  letter-spacing: -3px;
-  margin: 20px 0;
-}
-.gradient {
-  background: linear-gradient(90deg, var(--pink), var(--purple), var(--cyan));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.intro {
-  max-width: 650px;
-  font-size: 17px;
-  line-height: 1.8;
-  color: var(--muted);
-}
-.pill {
-  display: inline-block;
-  margin: 15px 10px 0 0;
-  padding: 12px 18px;
-  border-radius: 30px;
-  background: var(--lime);
-  color: #21152a;
-  font-weight: 800;
-  text-decoration: none;
-}
-.secondary {
-  background: transparent;
-  border: 1px solid #ffffff50;
-  color: var(--text);
-}
-section { padding: 28px 0; scroll-margin-top: 20px; }
-.section-head { margin-bottom: 18px; }
-h2 { font-size: clamp(25px, 5vw, 38px); margin: 8px 0; }
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-}
-.card {
-  background: #241831df;
-  border: 1px solid #ffffff24;
-  border-radius: 20px;
-  padding: 22px;
-  min-height: 180px;
-  box-shadow: 0 12px 35px #00000015;
-}
-.card:nth-child(3n+1) { border-top: 3px solid var(--pink); }
-.card:nth-child(3n+2) { border-top: 3px solid var(--lime); }
-.card:nth-child(3n) { border-top: 3px solid var(--cyan); }
-.symbol { font-size: 28px; }
-.card h3 { margin: 14px 0 8px; font-size: 20px; }
-.card p, .copy {
-  color: var(--muted);
-  line-height: 1.8;
-  font-size: 15px;
-}
-.card a { color: var(--cyan); }
-.story {
-  border-radius: 22px;
-  padding: 25px;
-  background: linear-gradient(135deg, #ff5ca81c, #bb8cff20, #73f5e11a);
-  border: 1px solid #ffffff25;
-}
-.contact {
-  text-align: center;
-  padding: 35px 20px;
-  margin-top: 35px;
-  border-radius: 24px;
-  background: #d5ff7212;
-  border: 1px solid #d5ff7244;
-}
-footer {
-  text-align: center;
-  padding: 25px 10px;
-  color: #b9a9c4;
-  font-size: 12px;
-  border-top: 1px solid #ffffff20;
-}
-@media (max-width: 500px) {
-  header { align-items: flex-start; }
-  nav { gap: 10px; }
-  h1 { letter-spacing: -1.5px; }
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171020">
+
+  <title>Min värld | Kreativitet utan gränser</title>
+
+  <style>
+    :root {
+      --bg: #171020;
+      --text: #fff7ff;
+      --muted: #d4c5dc;
+      --pink: #ff5ca8;
+      --purple: #bb8cff;
+      --lime: #d5ff72;
+      --cyan: #73f5e1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(
+          ellipse at 5% 5%,
+          #63245c 0,
+          transparent 35%
+        ),
+        radial-gradient(
+          ellipse at 95% 35%,
+          #253f54 0,
+          transparent 32%
+        ),
+        var(--bg);
+      font-family: system-ui, sans-serif;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 20px;
+      border-bottom: 1px solid #ffffff20;
+    }
+
+    .logo {
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--pink);
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      color: var(--lime);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 35px 20px 65px;
+    }
+
+    .eyebrow {
+      color: var(--lime);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      padding: 45px 0 50px;
+    }
+
+    h1 {
+      max-width: 800px;
+      margin: 20px 0;
+      font-size: clamp(44px, 10vw, 88px);
+      line-height: 0.99;
+      letter-spacing: -3px;
+    }
+
+    .gradient {
+      background: linear-gradient(
+        90deg,
+        var(--pink),
+        var(--purple),
+        var(--cyan)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .intro {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .pill {
+      display: inline-block;
+      margin: 15px 10px 0 0;
+      padding: 12px 18px;
+      border-radius: 30px;
+      background: var(--lime);
+      color: #21152a;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .pill:hover,
+    .pill:focus-visible {
+      opacity: 0.85;
+    }
+
+    .secondary {
+      border: 1px solid #ffffff50;
+      background: transparent;
+      color: var(--text);
+    }
+
+    section {
+      scroll-margin-top: 20px;
+      padding: 28px 0;
+    }
+
+    .section-head {
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 8px 0;
+      font-size: clamp(25px, 5vw, 38px);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+      );
+      gap: 15px;
+    }
+
+    .card {
+      min-height: 180px;
+      padding: 22px;
+      border: 1px solid #ffffff24;
+      border-radius: 20px;
+      background: #241831df;
+      box-shadow: 0 12px 35px #00000015;
+    }
+
+    .card:nth-child(3n + 1) {
+      border-top: 3px solid var(--pink);
+    }
+
+    .card:nth-child(3n + 2) {
+      border-top: 3px solid var(--lime);
+    }
+
+    .card:nth-child(3n) {
+      border-top: 3px solid var(--cyan);
+    }
+
+    .symbol {
+      font-size: 28px;
+    }
+
+    .card h3 {
+      margin: 14px 0 8px;
+      font-size: 20px;
+    }
+
+    .card p,
+    .copy {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .card a {
+      color: var(--cyan);
+    }
+
+    .story {
+      padding: 25px;
+      border: 1px solid #ffffff25;
+      border-radius: 22px;
+      background:
+        linear-gradient(
+          135deg,
+          #ff5ca81c,
+          #bb8cff20,
+          #73f5e11a
+        );
+    }
+
+    .contact {
+      margin-top: 35px;
+      padding: 35px 20px;
+      border: 1px solid #d5ff7244;
+      border-radius: 24px;
+      background: #d5ff7212;
+      text-align: center;
+    }
+
+    footer {
+      padding: 25px 10px;
+      border-top: 1px solid #ffffff20;
+      color: #b9a9c4;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--lime);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 500px) {
+      header {
+        align-items: flex-start;
+      }
+
+      nav {
+        gap: 10px;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-  <div class="logo">MIN <span>VÄRLD ✦</span></div>
-  <nav aria-label="Huvudmeny">
-    <a href="#om">Om mig</a>
-    <a href="special.html">SpecialN'Customized</a>
-    <a href="#projekt">Projekt</a>
-    <a href="#hobbys">Hobbys</a>
-    <a href="butik.html">Butik</a>
-  </nav>
-</header>
-
-<main>
-  <section class="hero" id="om">
-    <div class="eyebrow">Personligt · Kreativt · Alternativt</div>
-    <h1>Inte gjord för att passa in.<br>
-      <span class="gradient">Gjorda för att skapa.</span>
-    </h1>
-    <p class="intro">
-      Välkommen till min värld – en personlig plats för kreativitet,
-      hantverk, återbruk och digital problemlösning. Från plagg som får
-      nytt liv till idéer som växer fram genom teknik och skapande.
-    </p>
-    <a class="pill" href="special.html">Utforska SpecialN'Customized →</a>
-    <a class="pill secondary" href="butik.html">Gå till butiken →</a>
-  </section>
-
-  <section id="projekt">
-    <div class="section-head">
-      <div class="eyebrow">Saker jag utforskar</div>
-      <h2>Mina projekt</h2>
+  <header>
+    <div class="logo">
+      MIN <span aria-hidden="true">VÄRLD ✦</span>
     </div>
-    <div class="cards">
-      <article class="card">
-        <div class="symbol">✦</div>
-        <h3>Skapa & förnya</h3>
-        <p>Från slitna plagg till personliga skapelser. Jag utforskar
-        hantverk, detaljer och återbruk för att ge saker ett nytt liv.</p>
-        <a href="special.html#historien-bakom">Se historien & galleriet →</a>
-      </article>
-      <article class="card">
-        <div class="symbol">⌘</div>
-        <h3>Teknik & Linux</h3>
-        <p>Jag bygger och utvecklar digitala projekt med öppen källkod,
-        Linux, Git och webbteknik – även direkt från mobilen.</p>
-        <a href="https://github.com/pernillalarsson98-ctrl"
-           target="_blank" rel="noopener">Besök min GitHub →</a>
-      </article>
-      <article class="card">
-        <div class="symbol">✧</div>
-        <h3>Nästa idé</h3>
-        <p>En plats för nya projekt, samarbeten och kreativa tankar
-        som fortfarande håller på att ta form.</p>
-      </article>
-    </div>
-  </section>
 
-  <section id="hobbys">
-    <div class="section-head">
-      <div class="eyebrow">Många sidor av samma person</div>
-      <h2>Hobbys & tjänster</h2>
-    </div>
-    <div class="story">
-      <p class="copy">
-        Jag tycker om att skapa unika saker och hitta nya användningsområden
-        för sådant som redan finns. För mig handlar det om hantverk, fantasi,
-        återbruk och att våga göra saker på sitt eget sätt.
+    <nav aria-label="Huvudmeny">
+      <a href="#om">Om mig</a>
+      <a href="special.html">SpecialN'Customized</a>
+      <a href="#projekt">Projekt</a>
+      <a href="#hobbys">Hobbys</a>
+      <a href="#berattelsen">Berättelsen</a>
+      <a href="butik.html">Butik</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="om">
+      <div class="eyebrow">
+        Personligt · Kreativt · Alternativt
+      </div>
+
+      <h1>
+        Inte gjord för att passa in.<br>
+        <span class="gradient">Gjort för att skapa.</span>
+      </h1>
+
+      <p class="intro">
+        Välkommen till min värld – en personlig plats för kreativitet,
+        hantverk, återbruk och digital problemlösning. Från plagg som får
+        nytt liv till idéer som växer fram genom teknik och skapande.
       </p>
+
+      <a class="pill" href="special.html">
+        Utforska SpecialN'Customized →
+      </a>
+
+      <a class="pill secondary" href="butik.html">
+        Gå till butiken →
+      </a>
+    </section>
+
+    <section id="projekt">
+      <div class="section-head">
+        <div class="eyebrow">Saker jag utforskar</div>
+        <h2>Mina projekt</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="symbol" aria-hidden="true">✦</div>
+
+          <h3>Skapa & förnya</h3>
+
+          <p>
+            Från slitna plagg till personliga skapelser. Jag utforskar
+            hantverk, detaljer och återbruk för att ge saker ett nytt liv.
+          </p>
+
+          <a href="special.html#historien-bakom">
+            Se historien & galleriet →
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="symbol" aria-hidden="true">⌘</div>
+
+          <h3>Teknik & Linux</h3>
+
+          <p>
+            Jag bygger och utvecklar digitala projekt med öppen källkod,
+            Linux, Git och webbteknik – även direkt från mobilen.
+          </p>
+
+          <a
+            href="https://github.com/pernillalarsson98-ctrl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Besök min GitHub →
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="symbol" aria-hidden="true">✧</div>
+
+          <h3>Nästa idé</h3>
+
+          <p>
+            En plats för nya projekt, samarbeten och kreativa tankar
+            som fortfarande håller på att ta form.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="hobbys">
+      <div class="section-head">
+        <div class="eyebrow">
+          Många sidor av samma person
+        </div>
+
+        <h2>Hobbys & tjänster</h2>
+      </div>
+
+      <div class="story">
+        <p class="copy">
+          Jag tycker om att skapa unika saker och hitta nya
+          användningsområden för sådant som redan finns. För mig handlar
+          det om hantverk, fantasi, återbruk och att våga göra saker på
+          sitt eget sätt.
+        </p>
+
+        <p class="copy">
+          Här samlar jag mina intressen och projekt – och sidan får växa
+          i takt med att nya idéer blir verklighet.
+        </p>
+      </div>
+    </section>
+
+    <section id="berattelsen">
+      <div class="section-head">
+        <div class="eyebrow">
+          Mer än bara ett färdigt resultat
+        </div>
+
+        <h2>Berättelsen bakom skapandet</h2>
+      </div>
+
       <p class="copy">
-        Här samlar jag mina intressen och projekt – och sidan får växa
-        i takt med att nya idéer blir verklighet.
+        Varje skapelse har sin egen väg dit: materialet, idéerna, arbetet
+        och de små detaljerna som gör den personlig. Jag vill lyfta fram
+        återbruk och hantverk i stället för massproduktion.
       </p>
-    </div>
-  </section>
 
-  <section id="berattelsen">
-    <div class="section-head">
-      <div class="eyebrow">Mer än bara ett färdigt resultat</div>
-      <h2>Berättelsen bakom skapandet</h2>
-    </div>
-    <p class="copy">
-      Varje skapelse har sin egen väg dit: materialet, idéerna, arbetet
-      och de små detaljerna som gör den personlig. Jag vill lyfta fram
-      återbruk och hantverk i stället för massproduktion.
-    </p>
-    <a class="pill" href="special.html#historien-bakom">Läs hela berättelsen →</a>
-  </section>
+      <a class="pill" href="special.html#historien-bakom">
+        Läs hela berättelsen →
+      </a>
+    </section>
 
-  <section class="contact" id="kontakt">
-    <div class="eyebrow">Nyfiken på det jag gör?</div>
-    <h2>Vi hörs när du vill.</h2>
-    <p class="copy">
-      Har du en fråga, en idé eller funderar du på en specialbeställning?
-    </p>
-    <a class="pill" href="mailto:pernillalarsson98@gmail.com">Kontakta mig →</a>
-    <a class="pill secondary" href="butik.html">Se butiken →</a>
-  </section>
-</main>
+    <section class="contact" id="kontakt">
+      <div class="eyebrow">Nyfiken på det jag gör?</div>
 
-<footer>Min värld ✦ Personligt skapad med HTML och CSS</footer>
+      <h2>Vi hörs när du vill.</h2>
+
+      <p class="copy">
+        Har du en fråga, en idé eller funderar du på en
+        specialbeställning?
+      </p>
+
+      <a
+        class="pill"
+        href="mailto:pernillalarsson98@gmail.com"
+      >
+        Kontakta mig →
+      </a>
+
+      <a class="pill secondary" href="butik.html">
+        Se butiken →
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    Min värld ✦ Personligt skapad med HTML och CSS
+  </footer>
 </body>
 </html>
