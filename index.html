@@ -1,175 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="sv">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#171020">
-<title>Min värld | Kreativitet utan gränser</title>
-<style>
-:root {
-  --bg: #171020;
-  --panel: #241831;
-  --text: #fff7ff;
-  --muted: #d4c5dc;
-  --pink: #ff5ca8;
-  --purple: #bb8cff;
-  --lime: #d5ff72;
-  --cyan: #73f5e1;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  color: var(--text);
-  background:
-    radial-gradient(ellipse at 5% 5%, #63245c 0, transparent 35%),
-    radial-gradient(ellipse at 95% 35%, #253f54 0, transparent 32%),
-    var(--bg);
-  font-family: system-ui, sans-serif;
-}
-a { color: inherit; }
-header {
-  position: relative;
-  padding: 20px;
-  border-bottom: 1px solid #ffffff20;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-.logo { font-weight: 900; letter-spacing: 1px; }
-.logo span { color: var(--pink); }
-nav { display: flex; gap: 15px; flex-wrap: wrap; }
-nav a {
-  text-decoration: none;
-  font-size: 13px;
-  color: var(--muted);
-}
-nav a:hover { color: var(--lime); }
-main { max-width: 1000px; margin: auto; padding: 35px 20px 65px; }
-.eyebrow {
-  color: var(--lime);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 12px;
-  font-weight: 800;
-}
-.hero { padding: 45px 0 50px; }
-h1 {
-  max-width: 800px;
-  font-size: clamp(44px, 10vw, 88px);
-  line-height: .99;
-  letter-spacing: -3px;
-  margin: 20px 0;
-}
-.gradient {
-  background: linear-gradient(90deg, var(--pink), var(--purple), var(--cyan));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.intro {
-  max-width: 650px;
-  font-size: 17px;
-  line-height: 1.8;
-  color: var(--muted);
-}
-.pill {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 18px;
-  border-radius: 30px;
-  background: var(--lime);
-  color: #21152a;
-  font-weight: 800;
-  text-decoration: none;
-}
-section { padding: 28px 0; scroll-margin-top: 20px; }
-.section-head { margin-bottom: 18px; }
-h2 { font-size: clamp(25px, 5vw, 38px); margin: 8px 0; }
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-}
-.card {
-  background: #241831df;
-  border: 1px solid #ffffff24;
-  border-radius: 20px;
-  padding: 22px;
-  min-height: 180px;
-  box-shadow: 0 12px 35px #00000015;
-}
-.card:nth-child(3n+1) { border-top: 3px solid var(--pink); }
-.card:nth-child(3n+2) { border-top: 3px solid var(--lime); }
-.card:nth-child(3n) { border-top: 3px solid var(--cyan); }
-.symbol { font-size: 28px; }
-.card h3 { margin: 14px 0 8px; font-size: 20px; }
-.card p, .copy {
-  color: var(--muted);
-  line-height: 1.8;
-  font-size: 15px;
-}
-.story {
-  border-radius: 22px;
-  padding: 25px;
-  background: linear-gradient(135deg, #ff5ca81c, #bb8cff20, #73f5e11a);
-  border: 1px solid #ffffff25;
-}
-.contact {
-  text-align: center;
-  padding: 35px 20px;
-  margin-top: 35px;
-  border-radius: 24px;
-  background: #d5ff7212;
-  border: 1px solid #d5ff7244;
-}
-.contact .pill { margin-top: 8px; }
-footer {
-  text-align: center;
-  padding: 25px 10px;
-  color: #b9a9c4;
-  font-size: 12px;
-  border-top: 1px solid #ffffff20;
-}
-@media (max-width: 500px) {
-  header { align-items: flex-start; }
-  nav { gap: 10px; }
-  h1 { letter-spacing: -1.5px; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pernilla Larsson | Portfolio & Skapande</title>
+    <style>
+        body { background-color: #0d0d0d; color: #f0f0f0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
+        header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 1px solid #222; }
+        nav a { color: #888; text-decoration: none; margin-left: 15px; font-weight: 500; }
+        nav a:hover { color: #00ff66; }
+        .btn-green { display: inline-block; padding: 10px 18px; background-color: #00ff66; color: #000; font-weight: bold; text-decoration: none; border-radius: 4px; margin-top: 10px; }
+        .card-grid { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
+        .card { border: 1px solid #222; padding: 20px; border-radius: 8px; flex: 1; min-width: 260px; background: #141414; }
+        section { margin: 40px 0; }
+        h1, h2, h3 { color: #fff; }
+        .accent { color: #00ff66; }
+        footer { border-top: 1px solid #222; padding-top: 20px; color: #666; font-size: 0.85em; text-align: center; }
+    </style>
 </head>
 <body>
+
 <header>
-  <div class="logo">MIN <span>VÄRLD ✦</span></div>
-  <nav aria-label="Huvudmeny">
-    
-<section id="produkter" style="margin: 40px 0; padding: 20px 0; border-top: 1px solid #333;">
-  <h2 style="color: #00ff66;">Produkter & Custom-beställningar</h2>
-  <p>Här kan du köpa färdiga unika alster eller lägga en handpenning för skräddarsydda projekt.</p>
+    <div style="font-weight: bold; font-size: 1.2em;">Pernilla Larsson</div>
+    <nav>
+        <a href="special.html">Special & Custom</a>
+        <a href="#produkter">Produkter</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+</header>
 
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
-    
-    <div style="border: 1px solid #333; padding: 20px; border-radius: 8px; flex: 1; min-width: 260px; background: #111;">
-      <h3 style="color: #fff; margin-top: 0;">Custom Skinnjacka / Återbruk</h3>
-      <p style="color: #ccc;">Unikt hantverk med nitar, patchar och personlig anpassning.</p>
-      <p style="font-weight: bold; font-size: 1.2em; color: #00ff66;">Fast pris / Handpenning</p>
-      <a href="https://revolut.me/pernillalarsson98" target="_blank" style="display:inline-block; padding:10px 18px; background-color:#00ff66; color:#000; font-weight:bold; text-decoration:none; border-radius:4px;">Betala med Revolut / Kort →</a>
-    </div>
+<main>
+    <section style="margin-top: 30px;">
+        <div style="color: #888; text-transform: uppercase; font-size: 0.85em;">Special & Custom</div>
+        <h1 style="font-size: 2.2em; margin: 10px 0;">Kreativt hantverk & digital problemlösning</h1>
+        <p style="color: #ccc; max-width: 600px;">Välkommen till min personliga plats på webben där jag kombinerar fysiskt skapande med teknik.</p>
+        <a href="special.html" class="btn-green">Utforska Special & Custom →</a>
+    </section>
 
-    <div style="border: 1px solid #333; padding: 20px; border-radius: 8px; flex: 1; min-width: 260px; background: #111;">
-      <h3 style="color: #fff; margin-top: 0;">Specialbeställning & Konsultation</h3>
-      <p style="color: #ccc;">Boka en skräddarsydd lösning eller custom-design efter dina önskemål.</p>
-      <p style="font-weight: bold; font-size: 1.2em; color: #00ff66;">Enligt överenskommelse</p>
-      <a href="https://revolut.me/pernillalarsson98" target="_blank" style="display:inline-block; padding:10px 18px; background-color:#00ff66; color:#000; font-weight:bold; text-decoration:none; border-radius:4px;">Betala med Revolut / Kort →</a>
-    </div>
+    <section id="hobbys" style="border-top: 1px solid #222; padding-top: 30px;">
+        <h2 class="accent">Hobbys & Tjänster</h2>
+        <p>Jag brinner för att skapa unika saker – oavsett om det handlar om att ge ett skinnplagg nytt liv med nitar och patchar eller att bygga digitala projekt från grunden i terminalen. Här samlar jag mitt skapande inom skräddarsytt återbruk, teknik och kreativ problemlösning. Har du ett plagg du vill göra personligt eller en idé du vill spåna kring?</p>
+    </section>
 
-  </div>
-</section>
-<a href="mailto:pernillalarsson98@gmail.com" style="display:inline-block; padding:10px 20px; background-color:#00ff66; color:#000; font-weight:bold; text-decoration:none; border-radius:4px;">Mejla mig (pernillalarsson98@gmail.com)</a>
-  </section>
+    <section id="projekt" style="border-top: 1px solid #222; padding-top: 30px;">
+        <h2 class="accent">Mina Projekt</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Skapa & förnya</h3>
+                <p>Från slitna skinnjackor till unika custom-plagg. Här utforskar jag hantverk med nitar, patchar och kreativa omkonstruktioner för att ge kläder en helt egen karaktär och ett nytt liv.</p>
+                <a href="special.html#historien-bakom" class="btn-green">Se historien & galleriet →</a>
+            </div>
+            <div class="card">
+                <h3>Teknik & Linux</h3>
+                <p>Att bygga, modifiera och drifta webbplatser direkt från terminalen i Android via Termux och Git. Nördiga lösningar, öppen källkod och teknisk problemlösning helt från grunden utan genvägar.</p>
+                <a href="https://github.com/pernillalarsson98-ctrl" target="_blank" class="btn-green">Besök min GitHub →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="produkter" style="border-top: 1px solid #222; padding-top: 30px;">
+        <h2 class="accent">Produkter & Custom-beställningar</h2>
+        <p>Här kan du köpa färdiga unika alster eller lägga en handpenning för skräddarsydda projekt.</p>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Custom Skinnjacka / Återbruk</h3>
+                <p style="color: #ccc;">Unikt hantverk med nitar, patchar och personlig anpassning.</p>
+                <p style="font-weight: bold; font-size: 1.2em;" class="accent">Fast pris / Handpenning</p>
+                <a href="https://revolut.me/pernillalarsson98" target="_blank" class="btn-green">Betala med Revolut / Kort →</a>
+            </div>
+            <div class="card">
+                <h3>Specialbeställning & Konsultation</h3>
+                <p style="color: #ccc;">Boka en skräddarsydd lösning eller custom-design efter dina önskemål.</p>
+                <p style="font-weight: bold; font-size: 1.2em;" class="accent">Enligt överenskommelse</p>
+                <a href="https://revolut.me/pernillalarsson98" target="_blank" class="btn-green">Betala med Revolut / Kort →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" style="border-top: 1px solid #222; padding-top: 30px;">
+        <div style="color: #888; text-transform: uppercase; font-size: 0.85em;">Nyfiken på det jag gör?</div>
+        <h2>Vi hörs när du vill.</h2>
+        <p style="color: #ccc;">Har du frågor om beställningar eller idéer du vill spåna kring?</p>
+        <a href="mailto:pernillalarsson98@gmail.com" class="btn-green">Mejla mig (pernillalarsson98@gmail.com)</a>
+    </section>
 </main>
-<footer>Min värld ✦ Personligt skapad med HTML, CSS och Python</footer>
+
+<footer>
+    Min värld ✦ Personligt skapad med HTML, CSS och Python
+</footer>
+
 </body>
 </html>
